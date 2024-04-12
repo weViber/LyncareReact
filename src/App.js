@@ -24,7 +24,6 @@ import Zhchs from './pages/zh-chs/MainZhchs';
 function App() {
     const lang = navigator.language.toLowerCase().substring(0.2);
     const navigate = useNavigate();
-
     useEffect(() => {
         if (lang === "zh-cn") {
             if (window.location.href.indexOf("zh-chs") !== -1) {

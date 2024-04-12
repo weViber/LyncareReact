@@ -1,4 +1,4 @@
-import URL from "https://lyncare-deloy.vercel.app";
+import URL from "./url";
 
 const baseUrl = `${URL}/api`;
 
