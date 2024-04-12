@@ -1,5 +1,3 @@
-import URL from "./url";
-
-const baseUrl = `${URL}/api`;
+const baseUrl = `https://lyncare-deloy.vercel.app/api`;
 
 export default baseUrl;
