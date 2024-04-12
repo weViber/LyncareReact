@@ -3,6 +3,6 @@ import baseUrl from './apiConfig';
 
 export const requirementsCompleted = (requirements) => {
     return axios.post(`${baseUrl}/requirements`, {
-      requirements
+        requirements
     });
 };
