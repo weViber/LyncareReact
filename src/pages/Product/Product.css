@@ -14,7 +14,23 @@
     display: block;
     width: 100%;
 }
+.BrochureBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 15px 20px;
+    background-color: #00CDA8;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
 
+.BrochureBtn:hover{
+    /* opacity: 0.8; */
+    transition: 0.5s;
+    background-color: #008E82;
+}
 
 hr{
     width: 100%;

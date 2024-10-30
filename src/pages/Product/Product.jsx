@@ -1,14 +1,15 @@
 import './Product.css'
+
+import Dblock_filter from './../../components/images/Product/Dblock_filter.png'
 import { Link } from 'react-router-dom';
 import Product_bg from './../../components/images/Product/Product_bg.png'
-import car_airflow from './../../components/images/Product/car_airflow.png'
-import Dblock_filter from './../../components/images/Product/Dblock_filter.png'
 import box1 from './../../components/images/Product/box1_activatedcarbon.png'
 import box2 from './../../components/images/Product/box2_content.png'
 import box3 from './../../components/images/Product/box3_LMF.png'
 import box4 from './../../components/images/Product/box4_7layerstructure.png'
 import box5 from './../../components/images/Product/box5_substitute.png'
 import box6 from './../../components/images/Product/box6_Registeredcompany.png'
+import car_airflow from './../../components/images/Product/car_airflow.png'
 import wooridongne from './../../components/images/Product/wooridongne.png'
 
 const Product = ()=>{
@@ -16,6 +17,7 @@ const Product = ()=>{
     <div className='Product'>
         <h2 className='Product_bg'><img src={ Product_bg } alt="Product_배경" />Product 당신의 생활이 더욱 안전하고 편리하길 바라는 린케어는 자동차 전반에 걸친 라이프 스타일 솔루션을 연구하며
             다음과 같은 제품과 서비스를 제공합니다</h2>
+
         <div className='Product_Wrap'>
             <div className='CabinFilter'>
                 <div className='CabinFilter_1'>
@@ -25,6 +27,11 @@ const Product = ()=>{
                         공기가 모두 거치게 되기 때문에 필터 하나만 바꿔도<br />
                         차량에서 순환하는 모든 공기를 강력하게 개선할 수 있습니다<br />
                         그래서 디블럭이 연구와 개발을 통해 제대로 만들었습니다.</p>
+                <button className='BrochureBtn'>
+                <a href="/Brochure.pdf" download>
+    Brochure Download
+  </a>
+                </button>
                 </div>
                 <div className='CabinFilter_2'>
                     <p><img src={ car_airflow } alt="자동차공기흐름도" />자동차공기흐름도</p>
