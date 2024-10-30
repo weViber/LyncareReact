@@ -27,11 +27,11 @@ const Product = ()=>{
                         공기가 모두 거치게 되기 때문에 필터 하나만 바꿔도<br />
                         차량에서 순환하는 모든 공기를 강력하게 개선할 수 있습니다<br />
                         그래서 디블럭이 연구와 개발을 통해 제대로 만들었습니다.</p>
-                <button className='BrochureBtn'>
-                <a href="/Brochure.pdf" download>
-    Brochure Download
+      
+                <a className='BrochureBtn' href="/Brochure.pdf">
+                View Brochure
   </a>
-                </button>
+         
                 </div>
                 <div className='CabinFilter_2'>
                     <p><img src={ car_airflow } alt="자동차공기흐름도" />자동차공기흐름도</p>
