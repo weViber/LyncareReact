@@ -15,7 +15,7 @@ const about = ()=>{
   return (
     <div className='About'>
       <h2 className='About_bg'><img src={ About_bg } alt="lyncare_About" />소개 About 린케어가 추구하는 가치와 비전을 공유합니다</h2>
-      <div className='CEO'>
+      {/* <div className='CEO'>
           <h3>대표 인사말</h3>
           <h4 className='CEO_text_img'><img src= { CEO_KIM } alt="CEO_KIM Kun-woo" />CEO : KIM-Kun-woo</h4>
           <h4>“매일 차로 출퇴근하는 <span>소중한 내 가족을 위하는 마음으로</span>”</h4>
@@ -39,7 +39,7 @@ const about = ()=>{
             <p><span>대표 김건우 올림</span></p>
             <p><img src= { CEO_KIM } alt="CEO_KIM Kun-woo" />CEO : KIM-Kun-woo</p>
           </div>
-      </div>
+      </div> */}
       <hr />
 
       <div className='CoreValue'>
