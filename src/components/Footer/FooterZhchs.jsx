@@ -13,8 +13,8 @@ const Footer = ()=>{
           <p className='Footer_logo'><a href='/'><img src={ Footer_logo } alt="Footer_Logo" /></a></p> 
           </div>
           <div className='family_site'>
-            <a target='_blank' href="https://dblock.kr/">D.BLOCK 官方商城 <span>➔</span></a>
-            <a target='_blank' href="https://smartstore.naver.com/lyncare">NAVER SMARTSTORE <span>➔</span></a>
+            <a target='_blank' rel="noreferrer" href="https://dblock.kr/">D.BLOCK 官方商城 <span>➔</span></a>
+            <a target='_blank' rel="noreferrer" href="https://smartstore.naver.com/lyncare">NAVER SMARTSTORE <span>➔</span></a>
           </div>
        </div>
      

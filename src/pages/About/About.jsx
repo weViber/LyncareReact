@@ -1,6 +1,5 @@
 import './About.css'
 import About_bg from './../../components/images/About/About_bg.png'
-import CEO_KIM from './../../components/images/About/CEO_KIM.png'
 import CoreValue from './../../components/images/About/CoreValue.png'
 import History from './../../components/images/About/History.png'
 import History_bg from './../../components/images/About/History_bg.png'

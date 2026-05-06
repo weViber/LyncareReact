@@ -5,8 +5,6 @@ import MainVideo from './../../components/Video/MainVideo1440p.mp4'
 import Main_products_bg from './../../components/images/Main_products.png'
 import Main_woridongne from './../../components/images/Main_Myneighborhoodrepairshop.png'
 import Main_woridongne2 from './../../components/images/Main_Myneighborhoodrepair shopr_jobvacancy.png'
-import HeaderZhchs from '../../components/Header/HeaderZhchs';
-import Header from '../../components/Header/Header';
 
 const Main = ()=>{
 return (

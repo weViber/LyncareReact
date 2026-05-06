@@ -32,7 +32,7 @@ function App() {
                 navigate("/Zh-chs");
             }
         }
-    }, []);
+    }, [lang, navigate]);
 
     const [sending, setSending] = useState(false);
 

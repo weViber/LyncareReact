@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import "./Header.css";
 import Header_logo from "./../images/H_Lyncarelogo.png";
-import Sidebar from "../Sidebar/Sidebar";
 
 const Header = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('ko');
