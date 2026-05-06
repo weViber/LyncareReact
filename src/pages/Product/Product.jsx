@@ -28,7 +28,7 @@ const Product = ()=>{
                         차량에서 순환하는 모든 공기를 강력하게 개선할 수 있습니다<br />
                         그래서 디블럭이 연구와 개발을 통해 제대로 만들었습니다.</p>
       
-                <a className='BrochureBtn' href="/Brochure.pdf">
+                <a className='BrochureBtn' href="/D_Block_Catalog.pdf">
                 View Brochure
   </a>
          
