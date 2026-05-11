@@ -48,6 +48,29 @@
   letter-spacing: -0.48px;
 }
 
+.recaptcha-notice{
+  color: #888;
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+.recaptcha-notice a{
+  color: #555;
+  text-decoration: underline;
+}
+.recaptcha-notice a:hover{
+  color: #00CDA8;
+}
+
+.ContactBtn:disabled{
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 /* text_list */
 .text_list{
   display: flex;

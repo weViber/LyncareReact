@@ -8,6 +8,7 @@ import useRecaptcha from "../../hooks/useRecaptcha";
 
 const Contact = (props) => {
   const { executeRecaptcha } = useRecaptcha();
+  const [isSending, setIsSending] = useState(false);
   const [inputs, setInputs] = useState({
     company: "",
     call: "",
@@ -24,17 +25,35 @@ const Contact = (props) => {
       [e.target.name]: e.target.value,
     });
   };
+  const validate = () => {
+    if (!company.trim()) return "회사명을 입력해주세요.";
+    if (!name.trim()) return "담당자명을 입력해주세요.";
+    if (!email.trim()) return "이메일을 입력해주세요.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return "올바른 이메일 형식이 아닙니다.";
+    if (!phone.trim()) return "휴대폰 번호를 입력해주세요.";
+    if (!desc.trim()) return "문의내용을 입력해주세요.";
+    return null;
+  };
   const sendEmailBtn = async () => {
+    if (isSending) return;
+    const error = validate();
+    if (error) {
+      alert(error);
+      return;
+    }
     try {
-      props.setSending(true)
+      setIsSending(true);
+      props.setSending(true);
       const recaptchaToken = await executeRecaptcha("contact_form");
       await postEmail({ company, call, email, name, phone, desc, recaptchaToken });
       alert("문의가 성공적으로 접수되었습니다.");
+      setInputs({ company: "", call: "", email: "", name: "", phone: "", desc: "" });
     } catch (error) {
-      const message = error.response?.data?.message || error.message;
+      const message = error.response?.data?.message || error.message || "문의 접수에 실패했습니다. 잠시 후 다시 시도해주세요.";
       alert(message);
     } finally {
-      props.setSending(false)
+      setIsSending(false);
+      props.setSending(false);
     }
   };
   return (
@@ -49,6 +68,12 @@ const Contact = (props) => {
         <div className="Contact_text">
           <h3>문의</h3>
           <h4>신청시 자동으로 개인정보 수집 및 이용에 동의처리 됩니다.</h4>
+          <p className="recaptcha-notice">
+            본 사이트는 스팸 방지를 위해 Google reCAPTCHA를 사용합니다.{" "}
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">개인정보처리방침</a>
+            {" / "}
+            <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer">서비스 약관</a>이 적용됩니다.
+          </p>
           <div className="text_list">
             <div className="Company_info">
               <ul>
@@ -119,7 +144,9 @@ const Contact = (props) => {
                 onChange={handleInputs}
               />
             </p>
-            <button className="ContactBtn" onClick={sendEmailBtn}>접수하기</button>
+            <button className="ContactBtn" onClick={sendEmailBtn} disabled={isSending}>
+              {isSending ? "전송 중..." : "접수하기"}
+            </button>
           </div>
         </div>
 
