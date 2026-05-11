@@ -4,8 +4,10 @@ import callImg from "./../../components/images/Contact/call.png";
 import emailImg from "./../../components/images/Contact/email.png";
 import { useState } from "react";
 import { postEmail } from "../../service/emailService";
+import useRecaptcha from "../../hooks/useRecaptcha";
 
 const Contact = (props) => {
+  const { executeRecaptcha } = useRecaptcha();
   const [inputs, setInputs] = useState({
     company: "",
     call: "",
@@ -25,10 +27,12 @@ const Contact = (props) => {
   const sendEmailBtn = async () => {
     try {
       props.setSending(true)
-      await postEmail({ company, call, email, name, phone, desc });
+      const recaptchaToken = await executeRecaptcha("contact_form");
+      await postEmail({ company, call, email, name, phone, desc, recaptchaToken });
       alert("문의가 성공적으로 접수되었습니다.");
     } catch (error) {
-      alert(error.message);
+      const message = error.response?.data?.message || error.message;
+      alert(message);
     } finally {
       props.setSending(false)
     }

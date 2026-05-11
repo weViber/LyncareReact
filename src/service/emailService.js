@@ -1,7 +1,7 @@
 import axios from "axios";
 import baseUrl from "./apiConfig";
 
-export const postEmail = ({ company, call, email, name, phone, desc }) => {
+export const postEmail = ({ company, call, email, name, phone, desc, recaptchaToken }) => {
     return axios.post(`${baseUrl}/email`, {
         company,
         call,
@@ -9,5 +9,6 @@ export const postEmail = ({ company, call, email, name, phone, desc }) => {
         name,
         phone,
         desc,
+        recaptchaToken,
     });
 };
