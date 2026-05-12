@@ -1,7 +1,8 @@
 import './App.css';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Toaster } from 'sonner';
 
 import About from './pages/About/About';
 import AboutZhchs from './pages/About/AboutZhchs';
@@ -14,7 +15,6 @@ import HeaderZhchs from './components/Header/HeaderZhchs';
 import Main from './pages/Main';
 import Product from './pages/Product/Product';
 import ProductZhchs from './pages/Product/ProductZhchs';
-import Sending from './pages/Sending/Sending';
 import Sidebar from './components/Sidebar/Sidebar';
 import SidebarZhchs from './components/Sidebar/SidebarZhchs';
 import Support from './pages/Support/Support';
@@ -34,11 +34,9 @@ function App() {
         }
     }, [lang, navigate]);
 
-    const [sending, setSending] = useState(false);
-
     const Layout = ({ children }) => {
             return ( <
-                div > { sending && < Sending / > } <
+                div > <
                 Header / >
                 <
                 Sidebar / >
@@ -58,8 +56,8 @@ function App() {
                 element = { < Support / > }
                 />   <
                 Route path = '/contact'
-                element = { < Contact setSending = { setSending }
-                    />} / >
+                element = { < Contact / > }
+                />
                     <
                     /Routes> <
                     Footer / >
@@ -92,8 +90,8 @@ function App() {
                         element = { < SupportZhchs / > }
                         /> <
                         Route path = '/contactZhchs'
-                        element = { < ContactZhchs setSending = { setSending }
-                            />} / >
+                        element = { < ContactZhchs / > }
+                        />
                             <
                             /Routes> <
                             FooterZhchs / >
@@ -103,7 +101,11 @@ function App() {
                     };
 
                     return ( <
-                            div className = "App" > { sending && < Sending / > } <
+                            div className = "App" >
+                            <
+                            Toaster position = "top-center"
+                            richColors / >
+                            <
                             Routes >
                             <
                             Route element = { < Layout / > } >
@@ -121,8 +123,8 @@ function App() {
                             element = { < Support / > }
                             />   <
                             Route path = '/contact'
-                            element = { < Contact setSending = { setSending }
-                                />} / >
+                            element = { < Contact / > }
+                            />
                                 <
                                 /Route> <
                                 Route element = { < LayoutChina / > } >
@@ -140,8 +142,8 @@ function App() {
                                 element = { < SupportZhchs / > }
                                 /> <
                                 Route path = '/contactZhchs'
-                                element = { < ContactZhchs setSending = { setSending }
-                                    />} / >
+                                element = { < ContactZhchs / > }
+                                />
 
 
                                     <
