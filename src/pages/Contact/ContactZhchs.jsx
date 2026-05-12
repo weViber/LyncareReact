@@ -93,11 +93,11 @@ const Contact = () => {
           lyncare Contact
         </p>
       </div>
-      <div className="Context_form">
-        {submittedName ? (
+      {submittedName ? (
+        <div className="Contact_success_wrap">
           <div className="Contact_success">
             <div className="Contact_success__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="40" height="40">
+              <svg viewBox="0 0 24 24" width="48" height="48">
                 <circle cx="12" cy="12" r="11" fill="none" stroke="#00CDA8" strokeWidth="1.75" />
                 <path d="M7 12.5l3.5 3.5 7-7" fill="none" stroke="#00CDA8" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -112,7 +112,9 @@ const Contact = () => {
               重新提交
             </button>
           </div>
-        ) : (
+        </div>
+      ) : (
+        <div className="Context_form">
           <div className="Contact_text">
             <h3>咨询</h3>
             <h4>申请时,将自动同意收集和使用个人信息。</h4>
@@ -214,36 +216,36 @@ const Contact = () => {
               </button>
             </div>
           </div>
-        )}
 
-        <div className="Lyncare_Contact">
-          <div className="Lyncare_Contact_bg">
-            <h5>Lyncare Contact</h5>
-            <ul>
-              <li>02 - 6956 - 7985</li>
-              <li>1833-7098</li>
-              <li>lyncare@lyncare.co.kr</li>
-            </ul>
-          </div>
-          <div className="Lyncare_Contact_bg_m ">
-            <h5>Lyncare Contact</h5>
-            <ul>
-              <li>
-                <img src={callImg} alt="lyncare 서울전화번호" />
-                02 - 6956 - 7985
-              </li>
-              <li>
-                <img src={callImg} alt="lyncare 대표전화번호" />
-                1833-7098
-              </li>
-              <li>
-                <img src={emailImg} alt="lyncare email" />
-                lyncare@lyncare.co.kr
-              </li>
-            </ul>
+          <div className="Lyncare_Contact">
+            <div className="Lyncare_Contact_bg">
+              <h5>Lyncare Contact</h5>
+              <ul>
+                <li>02 - 6956 - 7985</li>
+                <li>1833-7098</li>
+                <li>lyncare@lyncare.co.kr</li>
+              </ul>
+            </div>
+            <div className="Lyncare_Contact_bg_m ">
+              <h5>Lyncare Contact</h5>
+              <ul>
+                <li>
+                  <img src={callImg} alt="lyncare 서울전화번호" />
+                  02 - 6956 - 7985
+                </li>
+                <li>
+                  <img src={callImg} alt="lyncare 대표전화번호" />
+                  1833-7098
+                </li>
+                <li>
+                  <img src={emailImg} alt="lyncare email" />
+                  lyncare@lyncare.co.kr
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

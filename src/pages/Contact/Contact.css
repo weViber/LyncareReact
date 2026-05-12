@@ -97,58 +97,91 @@ textarea[aria-invalid="true"]{
   border-color: #d92d20 !important;
 }
 
+.Contact_success_wrap{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px 120px;
+}
 .Contact_success{
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 48px 32px;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  padding: 72px 40px;
+  border-radius: 8px;
+  border: 1px solid #ECECEC;
   background: #fff;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-  margin: 24px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
 }
 .Contact_success__icon{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  background: #ecfdf5;
-  margin-bottom: 20px;
+  background: #E0F8F2;
+  margin-bottom: 28px;
 }
 .Contact_success__title{
   font-family: Pretendard;
-  font-size: 22px;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 12px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #000;
+  letter-spacing: -0.84px;
+  margin-bottom: 16px;
 }
 .Contact_success__msg{
   font-family: Pretendard;
-  font-size: 15px;
-  font-weight: 400;
-  color: #4b5563;
-  line-height: 1.6;
-  margin-bottom: 28px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.7;
+  letter-spacing: -0.48px;
+  margin-bottom: 36px;
 }
 .Contact_success__btn{
   font-family: Pretendard;
-  font-size: 14px;
-  font-weight: 600;
-  color: #00CDA8;
-  background: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  background: #00CDA8;
   border: 1px solid #00CDA8;
-  border-radius: 6px;
-  padding: 10px 24px;
+  border-radius: 4px;
+  padding: 14px 36px;
+  letter-spacing: -0.45px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 .Contact_success__btn:hover{
-  background: #00CDA8;
-  color: #fff;
+  background: #00B895;
+  border-color: #00B895;
+}
+
+@media (max-width: 1100px){
+  .Contact_success_wrap{
+    padding: 60px 20px 80px;
+  }
+  .Contact_success{
+    padding: 56px 24px;
+  }
+  .Contact_success__title{
+    font-size: 24px;
+  }
+}
+@media (max-width: 500px){
+  .Contact_success_wrap{
+    padding: 40px 16px 60px;
+  }
+  .Contact_success{
+    padding: 48px 20px;
+  }
+  .Contact_success__title{
+    font-size: 20px;
+  }
+  .Contact_success__msg{
+    font-size: 14px;
+  }
 }
 
 /* text_list */
